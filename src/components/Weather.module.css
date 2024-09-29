@@ -1,0 +1,128 @@
+.containerBox {
+    margin: 3rem 1rem;
+    padding: 2rem;
+    background-color: rgb(58, 66, 68);
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: #9e9e9e;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Adjusted width to allow full width within the flex container */
+    height: 305px;
+}
+
+.weatherAndConditions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    width: 100%;
+}
+
+.containerBox h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFF;
+}
+.containerBox h3 {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.containerBox span {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.containerBox p {
+    margin-top: 3rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #FFF;
+}
+
+.containerBox img {
+    width: 5rem;
+    height: 5rem;
+}
+
+.airConditions {
+    margin: 3rem 1rem;
+    padding: 2rem;
+    background-color: rgb(58, 66, 68);
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: #fff;
+    width: 50%;
+}
+
+.airConditions h2,h3 {
+    color: #b7b7b7;
+}
+
+.airConditionsBox {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.weatherItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.weatherIconBox {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.weatherItem img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.weatherDetails {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 884px) {
+    .weatherAndConditions {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.9rem;
+    }
+    .airConditions {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .containerBox {
+        height: auto;
+    }
+    .containerBox h2 {
+        font-size: 1.5rem;
+    }
+    .containerBox span,.containerBox p {
+        font-size: 1.2rem;
+    }
+    .weatherIconBox img {
+        width: 3.6rem;
+        height: 3.6rem;
+    }
+}
+@media (max-width: 360px) {
+    .airConditions h2 {
+        font-size: 1.2rem;
+    }
+    .weatherDetails h3 {
+        font-size: 0.9rem;
+    }
+    .weatherDetails p {
+        font-size: 0.7rem;
+    }
+}

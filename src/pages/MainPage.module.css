@@ -1,0 +1,9 @@
+.weatherContainer {
+    width: 70%;
+    margin: 0 auto;
+}
+@media (max-width: 884px) {
+    .weatherContainer {
+        width: 100%;
+    }
+}

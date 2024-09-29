@@ -1,0 +1,92 @@
+.forecastContainer,.todayForecastContainer {
+    width: 100%;
+    border-radius: 2rem;
+    padding: 1rem;
+    position: relative;
+}
+.forecastContainer h2,.todayForecastContainer h2 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.forecastGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.todayForecastGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+.forecastItem,.todayForecastItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgb(58, 66, 68);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.forecastItem img,.todayForecastItem img {
+    width: 50px;
+    height: 50px;   
+}
+.forecastItem p,.todayForecastItem p {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+.navigationContainer {
+    position: absolute;
+    right: 2rem;
+    top: 3.5rem;
+    width: 100px;
+}
+.navigationContainer img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.customPrev, .customNext {
+    position: absolute;
+    top: 20%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+.customPrev {
+    left: 10px; /* Position the left arrow on the left side */
+}
+
+.customNext {
+    right: 10px; /* Position the right arrow on the right side */
+}
+
+.customPrev::after,.customPrev::before,
+.customNext,.customNext::after,.customNext::before {
+    color: #fff;
+    content: none!important;
+} 
+
+@media(max-width : 480px) {
+    .forecastGrid,.todayForecastGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .forecastItem,.forecastItem {
+        width: 100%;
+    }
+    .forecastItem img,.forecastItem img {
+        width: 30px;
+        height: 30px;
+    }
+    .forecastItem p,.forecastItem p {
+        font-size: 1rem;
+    }
+}
